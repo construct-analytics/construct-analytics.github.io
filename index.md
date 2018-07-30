@@ -14,23 +14,27 @@ If you have a question about what we wrote here, or have a marketing data proble
 ## Services
 
 ### Analytics
+The process of data mining (retrieving data, cleaning data, visualising data) to perceive anomalies, trends in the data. 
 
 - Demonstrates the effectiveness of their campaign
 - Provide direction/improvements for next project
 - Reinforces theories/hypotheses they had before the campaign
   
 ### Segmentation
+Segmenting data based on similar attributes. eg. segmenting customers based on their spending habits.
 
 - Allows targeted and more focused marketing efforts
 - Better idea of who their audience is
 
 ### Predictive Modelling
+Using past data to give predictions on future unknown events. eg. using past data to predict the direction of future sales.
 
 - Gives them a better idea of sales numbers/item demand based on historical data, allowing better planning beforehand
 - Helps alleviate uncertainty surrounding a project before launch
 
 
 ### A/B Testing
+Comparing two versions of a webpage to see which one is more effective.
 
 - Easy data-driven way to test and analyze product/campaign
 - Low investment for high ROI
@@ -39,6 +43,4 @@ If you have a question about what we wrote here, or have a marketing data proble
 ## Recent Blog Posts
 
 [Everything a Digital Marketer Needs to Know About Data Collection Through (Ethical) Web Scraping](https://www.constructdigital.com/blog/everything-a-digital-marketer-needs-to-know-about-data-collection-through-ethical-web-scraping)
----
-<a target=”_blank” href=https://www.constructdigital.com/blog/everything-a-digital-marketer-needs-to-know-about-data-collection-through-ethical-web-scraping>Everything a Digital Marketer Needs to Know About Data Collection Through (Ethical) Web Scraping</a>
----
+
