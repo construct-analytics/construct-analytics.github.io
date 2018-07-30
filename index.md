@@ -40,5 +40,5 @@ If you have a question about what we wrote here, or have a marketing data proble
 
 [Everything a Digital Marketer Needs to Know About Data Collection Through (Ethical) Web Scraping](https://www.constructdigital.com/blog/everything-a-digital-marketer-needs-to-know-about-data-collection-through-ethical-web-scraping)
 ---
-<a target=”_blank” href=https://www.constructdigital.com/blog/everything-a-digital-marketer-needs-to-know-about-data-collection-through-ethical-web-scraping/>Everything a Digital Marketer Needs to Know About Data Collection Through (Ethical) Web Scraping</a>
+<a target=”_blank” href=https://www.constructdigital.com/blog/everything-a-digital-marketer-needs-to-know-about-data-collection-through-ethical-web-scraping>Everything a Digital Marketer Needs to Know About Data Collection Through (Ethical) Web Scraping</a>
 ---
