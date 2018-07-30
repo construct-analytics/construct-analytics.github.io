@@ -6,3 +6,6 @@ We are simply put – digital natives who love our craft of amazing and innovati
 
 
 ## [Contact Us](https://www.constructdigital.com/contact)
+
+
+[link to page1](./page1.html)
