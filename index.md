@@ -1,25 +1,21 @@
-## About Us
-
-**Construct Analytics**
-
-## [About Us](https://www.constructdigital.com/about)
+# [About Us](https://www.constructdigital.com/about)
 
 **The Construct X-Factor**
 
 We are simply put – digital natives who love our craft of amazing and innovative digital solutions.
 
 
-## Recent Blog Posts
+# Recent Blog Posts
 
 [Everything a Digital Marketer Needs to Know About Data Collection Through (Ethical) Web Scraping](https://www.constructdigital.com/blog/everything-a-digital-marketer-needs-to-know-about-data-collection-through-ethical-web-scraping)
 
-## [Contact Us](https://www.constructdigital.com/contact)
+### [Contact Us](https://www.constructdigital.com/contact)
 
 ___
 
-## Services
+# Some Services
 
-### Analytics
+## Analytics
 The process of data mining (retrieving data, cleaning data, visualising data) to perceive anomalies, trends in the data. 
 Some companies have a large database, but have no idea how to use it. Data by itself might not be able to show the insights that you need. Sometimes the data that you have might not even be enough. 
 
@@ -32,7 +28,7 @@ How does this help?
 - Provide direction/improvements for next project
 - Reinforces theories/hypotheses formed before the campaign
   
-### Segmentation
+## Segmentation
 It is possible that in a large set of Data, there might be similarities between some of them. It would then be more appropiate to group similar observations together. For example, in customer data, it might be possible to group them based on their spending habits. 
 
 The technique used to group these similar data points are broadly called clustering techniques. Some examples of these techniques are K Nearest Neighbors and K Means Clustering, whereby you group data points based on their distances from each other. Using the example of customer data, after segmentation, a more focused ad campaign can be used to target the different groups.
@@ -41,7 +37,7 @@ How does this help?
 - Allows targeted and more focused marketing efforts
 - Better idea of the target audience
 
-### Predictive Modelling
+## Predictive Modelling
 Using past data to give predictions on unknown events. This is often used to provide future events but could be used to predict unknown events that occur at anytime. For example. given two correlated variables, it is possible to extrapolate and predict points outside of the data. It is also possible to predict points within the data. More often that not, this is used to predict future sales based on past data.
 
 How does this help?
@@ -49,7 +45,7 @@ How does this help?
 - Helps alleviate uncertainty surrounding a project before launch
 
 
-### A/B Testing
+## A/B Testing
 In the context of digital marketing, A/B testing refers to comparing two versions of a web page to see which performs better. The process is first done by determining the different factors of a webpage to test, e.g headlines, colors etc that affects customer behavior. A large sample of visitors are then split up and pushed to the two webpages to test which one has a better conversion rate.
 
 How does this help?
