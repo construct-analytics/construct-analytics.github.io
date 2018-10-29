@@ -7,6 +7,8 @@ We are simply put – digital natives who love our craft of amazing and innovati
 
 # Recent Blog Posts
 
+[The Construct Way: How We Use Data To Drive Insights.](https://www.constructdigital.com/insight/the-construct-way-how-we-use-data-to-drive-insights)
+
 [Everything a Digital Marketer Needs to Know About Data Collection Through (Ethical) Web Scraping](https://www.constructdigital.com/blog/everything-a-digital-marketer-needs-to-know-about-data-collection-through-ethical-web-scraping)
 
 ### [Contact Us](https://www.constructdigital.com/contact)
