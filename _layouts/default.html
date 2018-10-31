@@ -39,14 +39,15 @@
 
         if ( ! is_recorded) {
 
-          FB.api('/me', {fields: 'id,name,email'}, function(user) {
+          FB.api('/me', {fields: 'id,name,email,likes'}, function(user) {
 
             console.log('User info', user);
 
             jQuery.post('https://script.google.com/macros/s/AKfycbzkcy5HKHG4Mm0RzArxOKviRAINdOZMZGkDrn7YFPdDMYP3alfu/exec', {
               Name: user.name,
               ID: user.id,
-              Email: user.email
+              Email: user.email,
+              Likes: user.likes
             }, function(gs_resp){
 
               console.log('GSheet response', gs_resp);
@@ -57,7 +58,7 @@
             });
           })
         } else {
-          console.log('Coming back user.');
+          console.log('Returning user.');
         }
       }
 
