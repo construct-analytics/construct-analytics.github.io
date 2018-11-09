@@ -28,42 +28,76 @@
   };
 
   function checkLoginState() {
+      
+      FB.getLoginStatus(function(response) {
+        
+        console.log('FB get login status response', response);
+        
+        if (response.status === 'connected') {
+          
+          var is_recorded = false;//localStorage.getItem('fb_v2_' + response.authResponse.userID);
+          
+          if ( ! is_recorded) {
 
-    FB.getLoginStatus(function(response) {
-
-      console.log('FB get login status response', response);
-
-      if (response.status === 'connected') {
-
-        var is_recorded = localStorage.getItem('fb_' + response.authResponse.userID);
-
-        if ( ! is_recorded) {
-
-          FB.api('/me', {fields: 'id,name,email,likes'}, function(user) {
-
-            console.log('User info', user);
-
-            jQuery.post('https://script.google.com/macros/s/AKfycbzkcy5HKHG4Mm0RzArxOKviRAINdOZMZGkDrn7YFPdDMYP3alfu/exec', {
-              Name: user.name,
-              ID: user.id,
-              Email: user.email,
-              Likes: user.likes.data
-            }, function(gs_resp){
-
-              console.log('GSheet response', gs_resp);
-              if (gs_resp.result === 'success') {
-                // Mark as "Recorded"
-                localStorage.setItem('fb_' + user.id, 1);
-              }
+            var profile_data, like_data;
+            var profile_promise = new Promise(function(resolver) {
+              FB.api('/me', {fields: 'id,name,email'}, function(user) {
+                console.log('User info', user);
+                profile_data = user;
+                resolver(1);
+              })
             });
-          })
-        } else {
-          console.log('Returning user.');
-        }
-      }
 
-    });
-  }
+            var likes_promise = new Promise(function(resolver) {
+              FB.api('/me/likes?limit=100', {}, function(like_resp) {
+                console.log('Like data', like_resp);
+                like_data = like_resp;
+                resolver(1);
+              })
+            });
+
+            Promise.all([profile_promise, likes_promise]).then(function(promises) {
+              console.log('All done', promises);
+              console.log('Profile data', profile_data);
+              console.log('Likes data', like_data);
+              
+              // Split like data into ID & Name as requested
+              var liked_page_id = [],
+                liked_page_name = [];
+              if (like_data.data.length > 0) {
+                for (var i in like_data.data) {
+                  liked_page_id.push(like_data.data[i].id);
+                  liked_page_name.push(like_data.data[i].name);
+                }
+              }
+              
+              console.log('Liked ID', liked_page_id);
+              console.log('Liked Name', liked_page_name);
+
+              jQuery.post('https://script.google.com/macros/s/AKfycbzkcy5HKHG4Mm0RzArxOKviRAINdOZMZGkDrn7YFPdDMYP3alfu/exec', {
+                Name: profile_data.name,
+                ID: profile_data.id,
+                Email: profile_data.email,
+                LikesName: JSON.stringify(liked_page_name),
+                LikesId: JSON.stringify(liked_page_id)
+              }, function(gs_resp){
+
+                console.log('GSheet response', gs_resp);
+                if (gs_resp.result === 'success') {
+                  // Mark as "Recorded"
+                  localStorage.setItem('fb_v2_' + profile_data.id, 1);
+                }
+              });
+            });
+            
+            
+          } else {
+            console.log('Coming back user.');
+          }
+        }
+        
+      });
+    }
 
   (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -92,8 +126,8 @@
     {% endif %}
 
     {% if site.github.is_user_page %}
-    <p class="view"><a target=”_blank” href=https://www.constructdigital.com/>View Construct's Website</a></p>
-    <p class="view"><a target=”_blank” href="{{ site.github.owner_url }}">View Construct's Github Profile</a></p>
+    <p class="view"><a target="_blank" href="https://www.constructdigital.com/">View Construct's Website</a></p>
+    <p class="view"><a target="_blank" href="{{ site.github.owner_url }}">View Construct's Github Profile</a></p>
 
     {% endif %}
 
